@@ -3,6 +3,7 @@ package gcm_test.app;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import gcm_test.app.gcm.MyInstanceIDListenerService;
 import gcm_test.app.gcm.RegistrationIntentService;
 
 public class MainActivity extends Activity {
@@ -10,6 +11,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new Intent(this, RegistrationIntentService.class);
+        startService(new Intent(this, RegistrationIntentService.class));
     }
 }
